@@ -1,0 +1,4 @@
+cd directory name   
+               -> e.g. cd 7.2 Integration With Rest API, Web Portal And MongoDB
+pip install -r requirement.txt   
+               # requirement.txt => a file with all required module name
