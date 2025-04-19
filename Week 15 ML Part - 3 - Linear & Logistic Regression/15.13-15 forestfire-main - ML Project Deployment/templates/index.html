@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - FWI Prediction</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+            width: 85%;
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Button Styles */
+        a {
+            font-size: 18px;
+            color: white;
+            background-color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Accent Background */
+        .accent-bg {
+            background: linear-gradient(45deg, #4CAF50, #81C784);
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            font-size: 16px;
+            background-color: #f1f1f1;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌟 Welcome to the Future of Fire Weather Prediction!</h1>
+        <p>🚀 Get ready to predict fire weather conditions with ease using our powerful FWI Prediction Tool. Let’s ensure safety with accurate predictions.</p>
+        
+        <!-- Call-to-Action Button -->
+        <p><a href="{{ url_for('predict_datapoint') }}">Go to FWI Prediction Page</a></p>
+
+        <!-- URL Section with Styling -->
+        <div class="accent-bg">
+            <p>You can also access the prediction form directly:</p>
+            <p><code>http://localhost:5000/predictdata</code></p>
+        </div>
+
+        <p>Click the link above or use the URL to start predicting fire weather conditions. It's fast, easy, and effective!</p>
+    </div>
+
+</body>
+</html>
