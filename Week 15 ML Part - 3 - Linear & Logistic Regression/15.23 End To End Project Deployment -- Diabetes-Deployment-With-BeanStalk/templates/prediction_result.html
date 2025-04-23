@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #4e747b,  #0e9e6e);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .result-card {
+      background-color: #ffffff;
+      padding: 40px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .status {
+      font-size: 24px;
+      color: #333;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background-color: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #0e9e6e;
+    }
+
+
+    .footer {
+      background-color: #2d3748;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #10b981;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Diabetes Prediction Result</h1>
+    <p>Your health insights, powered by AI</p>
+  </header>
+
+  <div class="content">
+    <h2>Prediction Result</h2>
+    <div class="result-card">
+      <p class="status">Prediction: <strong>{{ result }}</strong></p>
+      <a href="{{ url_for('predict_input') }}" class="cta-btn">Predict Again</a>
+    </div>
+  </div>
+
+
+  <footer class="footer">
+    <p>© 2025 Diabetes Prediction App | Developed with ❤️</p>
+    <p>For more info, visit our <a href="#">support page</a></p>
+  </footer>
+
+</body>
+</html>

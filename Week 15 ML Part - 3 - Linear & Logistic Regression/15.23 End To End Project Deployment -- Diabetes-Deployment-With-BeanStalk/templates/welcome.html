@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Prediction App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0e9e6e, #2d3748);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .content:hover {
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .content h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 30px;
+      background-color: #10b981;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 20px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-weight: 600;
+    }
+
+    .cta-btn:hover {
+      background-color: #0e9e6e;
+      transform: translateY(-3px);
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      width: 28%;
+      margin: 20px 0;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: scale(1.05);
+    }
+
+    .feature-box i {
+      font-size: 60px;
+      color: #10b981;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .footer {
+      background-color: #2d3748;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #10b981;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-box {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diabetes Prediction App</h1>
+    <p>Empowering your health with smart insights and early detection</p>
+  </header>
+
+  <div class="content">
+    <h2>Welcome to Our App!</h2>
+    <p>Predict your risk of diabetes based on your health data, powered by intelligent machine learning models.</p>
+
+    <p>Answer a few quick questions and get your results in seconds!</p>
+
+    <a href="{{ url_for('predict_input') }}" class="cta-btn">Start Prediction</a>
+   
+    <div class="features">
+      <div class="feature-box">
+        <i class="fas fa-stethoscope"></i>
+        <h3>Reliable Diagnosis</h3>
+        <p>Accurate predictions using cutting-edge medical-grade models.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-brain"></i>
+        <h3>AI Powered</h3>
+        <p>Utilizes advanced machine learning for precise health assessments.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h3>User Friendly</h3>
+        <p>Simple interface for everyone, no medical knowledge required.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Diabetes Prediction App | Developed with ❤️</p>
+    <p>For more info, visit our <a href="#">support page</a></p>
+  </footer>
+
+</body>
+</html>
